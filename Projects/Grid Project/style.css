@@ -1,0 +1,277 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar .links a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar img{
+    width: 24px;
+    height: 24px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 0;
+}
+
+nav.links{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.left{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+nav.links a:hover{
+    text-decoration: underline;
+
+
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.overlay{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.project-grid .project{
+    position: relative;
+}
+
+.project img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project .overlay:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.container .project-grid{
+    display: grid;
+    grid-template-areas: 
+    "eth eth alphabet"
+    "eth eth traveler"
+    "astro cube traveler"
+    "cup insta insta"
+    "foam foam dimensional";
+    grid-gap: 16px;
+}
+
+#eth {
+  grid-area: eth;
+}
+#alphabet {
+  grid-area: alphabet;
+}
+#traveler {
+  grid-area: traveler;
+}
+#astro {
+  grid-area: astro;
+}
+#cube {
+  grid-area: cube;
+}
+#cup {
+  grid-area: cup;
+}
+#insta {
+  grid-area: insta;
+}
+#foam {
+  grid-area: foam;
+}
+#dimensional {
+  grid-area: dimensional;
+}
+
+footer{
+    text-align: center;
+    padding: 64px;
+}
+
+.hamburger 
+.line1,.line2,.line3{
+  background-color: black;
+  width: 36px;
+  height: 4px;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+.hamburger{
+  display: none;
+  transition: all ease-in;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+.bar1{
+  animation: rotate1 0.5s forwards;
+}
+
+.bar2{
+  animation: rotate2 0.5s forwards;
+}
+
+.bar3{
+  animation: rotate3 0.5s forwards;
+}
+
+.mobileNav{
+  width: 80px;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -160px;
+  transition: transform 0.3s;
+}
+
+.openDrawer{
+  transform: translateX(-160px);
+}
+
+.mobileNav img{
+  width: 24px;
+  height: 24px;
+}
+
+.mobileNav a{
+  text-decoration: none;
+  color: black;
+  margin: 16px 0;
+}
+
+.mobileNav a:hover{
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1100px){
+  .container{
+    max-width: 100%;
+  }
+    .container .project-grid{
+      grid-template-areas: 
+      "eth eth"
+      "alphabet traveler"
+      "cube astro"
+      "insta insta"
+      "cup foam"
+      "dimensional dimensional";
+    }    
+}
+
+@media only screen and (max-width: 768px){
+  body{
+    margin: 0;
+  }
+  .container .project-grid{
+    grid-template-areas: 
+    "eth eth"
+    "alphabet alphabet"
+    "traveler traveler"
+    "cube astro"
+    "insta insta"
+    "cup cup"
+    "foam foam"
+    "dimensional dimensional";
+  }
+  .container{
+    padding: 0 16px;
+    margin-top: 100px;
+  }
+  header{
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    background-color: white;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+  }
+  nav.links{
+    display: none;
+  }
+
+  .hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer{
+    padding: 32px;
+  }
+
+}
+
+@keyframes rotate1{
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(45deg) translate(4px,10px);
+  }
+}
+
+@keyframes rotate3{
+  from {
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(-45deg) translate(4px,-10px);
+  }
+}
+
+
+@keyframes rotate2{
+  from{
+    transform: scale(1);
+    opacity: 1;
+  }
+  to{
+    transform: scale(0);
+    opacity: 0;
+  }
+}

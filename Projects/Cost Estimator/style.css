@@ -1,0 +1,304 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    background-color: rgb(233, 223, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(44, 44, 44);
+}
+
+h1{
+    color: rgb(83, 49, 156);
+    margin: 32px 0 64px 0;
+}
+
+.container{
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0 64px 64px 64px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container .tabs{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: rgb(200, 175, 255);
+    font-weight: bold;
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+.container .tabs .active{
+    color: rgb(83, 49, 156);
+    position: relative;
+}
+
+.container .tabs p:hover{
+    cursor: pointer;
+    color: rgb(83, 49, 156);;
+}
+
+.container .line{
+    height: 3px;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    position: absolute;
+    top: 98px;
+}
+
+.tabs p{
+    padding: 8px;
+}
+
+.active::before{
+    content: "";
+    width: 200%;
+    height: 4px;
+    position: absolute;
+    left: -50%;
+    bottom: -86.5%;
+    background-color: rgb(83, 49, 156);
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.toggler-wrapper{
+    display: flex;
+}
+
+.toggler-wrapper img{
+    height: 40px;
+    margin: 0 16px;
+}
+
+.toggle{
+    background-color: rgb(83, 49, 156);
+    width: 140px;
+    height: 32px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px 0 16px;
+    box-sizing: border-box;
+}
+
+.toggle span:last-of-type{
+    background-color: white;
+    color: rgb(83, 49, 156);
+    width: 50%;
+    height: 19px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 4px;
+} 
+
+.session-card{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(250, 247, 255);
+    margin: 16px 0;
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.session-card p{
+    font-size: 12px;
+    color: rgb(44,44,44);
+    font-weight: bold;
+}
+
+.session-card .number{
+    font-size: 54px;
+    margin: 0;
+    font-weight: bold;
+    color: rgb(83, 49, 156);
+}
+
+.description{
+    text-transform: none;
+    line-height: 32px;
+    margin: 16px 0 32px 0;
+}
+
+.slider{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.slider .bar{
+    width: 100%;
+    height: 16px;
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(210,210,210);
+    border-radius: 20px;
+    position: relative;
+}
+
+.slider .bar .progress{
+    width: 30%;
+    height: 18px;
+    background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 10, 74, 1) 36%,
+    rgba(83, 49, 156, 1) 100%
+  );
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider .point{
+    width: 24px;
+    height: 24px;
+    background-color: rgb(83, 49, 156);
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    left: 27%;
+    top: -5px;
+    transition: 0.15s transform ease;
+}
+
+.slider .point:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.scale ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    color: rgb(166,166,166);
+    font-weight: bold;
+}
+
+.card-wrapper{
+    display: flex;
+}
+
+.card-wrapper .card{
+    background-color: rgb(250, 247, 255);
+    text-transform: none;
+    color: rgb(83, 49, 156);
+    font-weight: bold;
+    padding: 16px 32px;
+    margin: 16px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+    transition: 0.15s transform ease;
+    position: relative;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card .price{
+    color: rgb(44,44,44);
+    font-size: 42px;
+}
+
+.top-section p{
+    margin: 4px 0;
+}
+
+.card hr{
+    width: 30%;
+    border: 1px solid rgb(210,210,210);
+    border-radius: 2px;
+}
+
+.top-section{
+    padding: 8px;
+}
+
+.card button{
+    background-color: rgb(83, 49, 156);
+    color: white;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.15s transform ease;
+}
+
+.card button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.top-header{
+    color: white;
+    width: 100%;
+    background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(53, 10, 74, 1) 36%,
+    rgba(83, 49, 156, 1) 100%
+  );
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  top: -24px;
+  left: 0;
+}
+
+@media only screen and (max-width: 850px){
+    body{
+        padding: 0 16px;
+    }
+    .card-wrapper{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .card-wrapper .card{
+        width: 100%;
+    }
+    .card:last-of-type{
+        margin-top: 40px;
+    }
+    .session-card{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    h1{
+        margin-bottom: 24px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    body{
+        padding: 0;
+    }
+    
+    .container{
+        padding: 0px 32px 32px 32px;
+    }
+
+    .card-wrapper .card{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
